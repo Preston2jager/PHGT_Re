@@ -26,7 +26,7 @@ class PHGTLayer(nn.Module):
 
         # Feed-forward network with residual connection
         ffn_output = self.ffn(x)
-        x = self.norm1(x + ffn_output)
+        x = self.norm2(x + ffn_output)
         
         return x
 
